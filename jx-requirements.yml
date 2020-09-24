@@ -3,15 +3,17 @@ cluster:
   environmentGitOwner: ""
   environmentGitPublic: false
   project: ""
-  provider: gke
+  provider: openshift
   zone: ""
+  registry: docker.io
 gitops: true
 environments:
 - key: dev
 - key: staging
 - key: production
 ingress:
-  domain: ""
+  domain: "apps.ocpdq02.norsk-tipping.no"
+  exposer: Route
   externalDNS: false
   tls:
     email: ""
